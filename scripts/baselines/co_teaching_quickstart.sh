@@ -1,0 +1,31 @@
+python train.py configs/sgd.yaml \
+    --optimizer.opt_name=sgd \
+    --trainer.coteaching=True \
+    --trainer.forget_rate=0.2 \
+    --trainer.num_gradual=10 \
+    --trainer.exponent=1.0 \
+    --model.model_name=resnet18 \
+    --model.widen_factor=1 \
+    --dataloader.data_name=cifar10 \
+    --dataloader.noise=0.25 \
+    --dataloader.noise_type=symmetric \
+    --trainer.seed=42 \
+    --logging.framework_name=wandb \
+    --logging.project_name=cifar10-label-noise-camera
+
+python train.py configs/sam.yaml \
+    --optimizer.opt_name=saner \
+    --optimizer.alpha=0.5 \
+    --trainer.alpha_scheduler=50 \
+    --trainer.coteaching=True \
+    --trainer.forget_rate=0.2 \
+    --trainer.num_gradual=10 \
+    --trainer.exponent=1.0 \
+    --model.model_name=resnet18 \
+    --model.widen_factor=1 \
+    --dataloader.data_name=cifar10 \
+    --dataloader.noise=0.25 \
+    --dataloader.noise_type=symmetric \
+    --trainer.seed=42 \
+    --logging.framework_name=wandb \
+    --logging.project_name=cifar10-label-noise-camera

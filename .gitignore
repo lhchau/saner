@@ -1,0 +1,24 @@
+# Raw datasets / downloaded data (keep prep scripts and docs)
+data/*
+!data/README.md
+!data/miniwebvision/
+data/miniwebvision/*
+!data/miniwebvision/prepare_miniwebvision.sh
+!data/miniwebvision/build_imagenet_folder_map.py
+
+# Training artifacts
+checkpoint/
+stored/
+runs/
+wandb/
+labels/*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
